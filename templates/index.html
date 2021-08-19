@@ -1,0 +1,10 @@
+ {% extends "main.html" %}
+ {% block content %}
+ <div class="mb-3 row">
+                            <form class="text-center" action="/" method="POST" enctype="multipart/form-data">
+                                <input class="custom-file-input secondary" type="file" name="image"/>
+                                    <br>
+                                    <input type = "submit"  class="btn btn-secondary" value="Upload"/>
+                            </form>
+                    </div>
+{% endblock %}

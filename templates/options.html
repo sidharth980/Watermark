@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block content %}
+    <form class="text-center" action = "{{ request.path }}" method = "post" enctype="multipart/form-data">
+
+              <select name="type">
+                <option value="draw">Text</option>
+                <option value="image">image</option>
+              </select>
+              <h3>Text Watermark</h3>
+              <label for = "size">Size</label>
+              <input type = "text" name = "sizetext"/>
+              <br>
+              <br>
+              <label for = "text">Text</label>
+              <input type = "text" name = "text"  />
+              <br>
+              <br>
+              <input type="submit" value="submit">
+              <br>
+              <br>
+              <h3>Picture Watermark</h3>
+              <br>
+              <input class="custom-file-input" type="file" name="image"/>
+              <br>
+              <br>
+              <label for = "size">Size</label>
+              <input type = "text" name = "sizepic"/>
+              <br>
+              <br>
+              <input type = "submit" value = "Submit" />
+     </form>
+{% endblock %}
